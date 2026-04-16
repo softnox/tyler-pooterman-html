@@ -1,8 +1,3 @@
-import {
-    FaExclamationTriangle,
-    FaCheckCircle
-} from 'react-icons/fa';
-
 const PropertySection = () => {
     return (
         <>
@@ -43,7 +38,7 @@ const PropertySection = () => {
                 }
 
                 .card-content h5 {
-                font-Size: 20px;
+                    font-Size: 20px;
                     margin-bottom: 5px;
                     font-weight: 700;
                 }
@@ -56,7 +51,6 @@ const PropertySection = () => {
 
             <section className="property-history-section">
                 <div className="container">
-
                     {/* TOP ROW: PROBLEM vs SOLUTION */}
                     <div className="row g-4 mb-5">
                         <div className="col-md-6 d-flex align-items-center">
