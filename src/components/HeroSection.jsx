@@ -2,36 +2,36 @@ import { useState, useEffect } from "react";
 import { playHeroEntrance } from "../animations";
 
 const C = {
-    bg:            "#0b1628",
-    primary:       "#1563df",
-    primaryLight:  "rgba(21,99,223,0.22)",
+    bg: "#0b1628",
+    primary: "#1563df",
+    primaryLight: "rgba(21,99,223,0.22)",
     primaryBorder: "rgba(21,99,223,0.45)",
-    primarySoft:   "rgba(21,99,223,0.18)",
-    white:         "#ffffff",
-    textHigh:      "#ffffff",
-    textMid:       "rgba(255,255,255,0.65)",
-    textLow:       "rgba(255,255,255,0.38)",
-    border:        "rgba(255,255,255,0.10)",
-    borderStrong:  "rgba(255,255,255,0.16)",
-    glassCard:     "rgba(255,255,255,0.05)",
-    glassInput:    "rgba(255,255,255,0.07)",
+    primarySoft: "rgba(21,99,223,0.18)",
+    white: "#ffffff",
+    textHigh: "#ffffff",
+    textMid: "rgba(255,255,255,0.65)",
+    textLow: "rgba(255,255,255,0.38)",
+    border: "rgba(255,255,255,0.10)",
+    borderStrong: "rgba(255,255,255,0.16)",
+    glassCard: "rgba(255,255,255,0.05)",
+    glassInput: "rgba(255,255,255,0.07)",
     // kept for the white report card on the right
-    lightBg:       "#f3f7fd",
-    lightBorder:   "#D8E6F7",
-    lightMid:      "#4A5568",
-    lightMuted:    "#8FA3BF",
-    lightDark:     "#161E2D",
-    lightSoft:     "#EEF4FF",
-    lightSoftBdr:  "rgba(21,99,223,0.18)",
+    lightBg: "#f3f7fd",
+    lightBorder: "#D8E6F7",
+    lightMid: "#4A5568",
+    lightMuted: "#8FA3BF",
+    lightDark: "#161E2D",
+    lightSoft: "#EEF4FF",
+    lightSoftBdr: "rgba(21,99,223,0.18)",
 };
 
 const heroProperties = [
-    { img: "/images/banner/banner-property-1.jpg", address: "142 Maple Ave, Austin TX",    score: 86 },
-    { img: "/images/banner/banner-property-2.jpg", address: "88 Oak Street, Denver CO",    score: 92 },
-    { img: "/images/banner/banner-property-3.jpg", address: "221 Pine Rd, Seattle WA",     score: 74 },
-    { img: "/images/banner/banner-property-4.jpg", address: "9 Harbor Blvd, Miami FL",     score: 88 },
-    { img: "/images/banner/banner-property-5.jpg", address: "33 Elm Court, Chicago IL",    score: 79 },
-    { img: "/images/banner/banner-property-6.jpg", address: "500 Lakeview Dr, Portland OR",score: 95 },
+    { img: "/images/banner/banner-property-1.jpg", address: "142 Maple Ave, Austin TX", score: 86 },
+    { img: "/images/banner/banner-property-2.jpg", address: "88 Oak Street, Denver CO", score: 92 },
+    { img: "/images/banner/banner-property-3.jpg", address: "221 Pine Rd, Seattle WA", score: 74 },
+    { img: "/images/banner/banner-property-4.jpg", address: "9 Harbor Blvd, Miami FL", score: 88 },
+    { img: "/images/banner/banner-property-5.jpg", address: "33 Elm Court, Chicago IL", score: 79 },
+    { img: "/images/banner/banner-property-6.jpg", address: "500 Lakeview Dr, Portland OR", score: 95 },
 ];
 
 const scoreColor = (s) => s >= 90 ? "#22c55e" : s >= 80 ? "#3b82f6" : "#f59e0b";
@@ -41,21 +41,21 @@ const HeroSection = () => {
     const [searchValue, setSearchValue] = useState("");
 
     const timelineItems = [
-        { icon: "🔧", service: "HVAC Full Service",        provider: "CoolAir Pro",        date: "Mar 2024" },
-        { icon: "⚡", service: "Electrical Panel Upgrade", provider: "WireRight LLC",       date: "Nov 2023" },
-        { icon: "🏠", service: "Roof Inspection & Repair", provider: "TopGuard Roofing",    date: "Jun 2023" },
-        { icon: "💧", service: "Plumbing System Check",    provider: "FlowMaster Plumbing", date: "Jan 2023" },
+        { icon: "🔧", service: "HVAC Full Service", provider: "CoolAir Pro", date: "Mar 2024" },
+        { icon: "⚡", service: "Electrical Panel Upgrade", provider: "WireRight LLC", date: "Nov 2023" },
+        { icon: "🏠", service: "Roof Inspection & Repair", provider: "TopGuard Roofing", date: "Jun 2023" },
+        { icon: "💧", service: "Plumbing System Check", provider: "FlowMaster Plumbing", date: "Jan 2023" },
     ];
 
     const stats = [
-        { value: "50K+",   label: "Properties Tracked" },
-        { value: "280K+",  label: "Verified Records" },
+        { value: "50K+", label: "Properties Tracked" },
+        { value: "280K+", label: "Verified Records" },
         { value: "4,800+", label: "Service Providers" },
     ];
 
     const roles = [
-        { icon: "🏡", label: "Homeowner",        desc: "Manage your property history" },
-        { icon: "🔍", label: "Buyer / Agent",     desc: "Unlock full property reports" },
+        { icon: "🏡", label: "Homeowner", desc: "Manage your property history" },
+        { icon: "🔍", label: "Buyer / Agent", desc: "Unlock full property reports" },
         { icon: "🛠️", label: "Service Provider", desc: "Log & manage your work" },
     ];
 
@@ -460,7 +460,7 @@ const HeroSection = () => {
                 </div>
             </div>
 
-          
+
         </section>
     );
 };

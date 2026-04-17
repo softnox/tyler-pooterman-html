@@ -8,8 +8,6 @@ import { initCarousels } from "../js/carousel";
 import { initRangeSliders } from "../js/rangle-slider";
 import { initAnimationHeading } from "../js/animation_heading";
 import PropertySection from "../components/PropertySection";
-import WhoItsFor from "../components/WhoItsFor";
-import ContentCards from "../components/ContentCards";
 import HeroSection from "../components/HeroSection";
 import FeaturesSection from "../components/FeaturesSection";
 import VerifiedPropertiesSection from "../components/VerifiedPropertiesSection";
@@ -41,14 +39,14 @@ const Home = () => {
             <div id="wrapper">
                 <div id="pagee" className="clearfix">
                     <Header />
-                    <HeroSection/>
-                   
+                    <HeroSection />
+
                     <PropertySection />
 
                     <FeaturesSection />
 
                     <VerifiedPropertiesSection />
-                 
+
                     <PricingSection />
 
                     <section className="flat-section bg-primary-new flat-testimonial">
@@ -209,7 +207,7 @@ const Home = () => {
                             <div className="sw-pagination sw-pagination-testimonial text-center"></div>
                         </div>
                     </section>
-                 
+
                     <section className="flat-section">
                         <div className="container">
                             <div className="box-title text-center wow fadeInUp" data-animate="up">
@@ -271,7 +269,7 @@ const Home = () => {
                             </div>
                         </div>
                     </section>
-            
+
                     <section className="flat-section pt-0">
                         <div className="container2">
                             <h6 className="mb-20 text-center text-capitalize text-black-4" data-animate="up">Trusted by over 150+ major companies</h6>
@@ -522,7 +520,7 @@ const Home = () => {
                             </div>
                         </div>
                     </section>
-                    
+
                     <Footer />
                 </div >
             </div >
