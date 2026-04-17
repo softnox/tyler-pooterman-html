@@ -62,13 +62,12 @@ const HowItWorks = () => {
 
                 <section
                     className="flat-title-page"
-                    style={{ backgroundImage: "url(https://homelengo.vercel.app/images/page-title/page-title-4.jpg)" }}
+                    style={{ backgroundImage: "url(https://homelengo.vercel.app/images/page-title/page-title-2.jpg)" }}
                 >
                     <div className="container">
                         <div className="breadcrumb-content">
                             <ul className="breadcrumb">
                                 <li><a href="/" className="text-white">Home</a></li>
-                                <li className="text-white">/ Pages</li>
                                 <li className="text-white">/ How It Works</li>
                             </ul>
                             <h1 className="text-center text-white title">How It Works</h1>
@@ -211,7 +210,7 @@ const HowItWorks = () => {
                                 </div>
                             </div>
                             <div className="box-right">
-                                <img src="/images/banner/banner-property-10.jpg" alt="How it works banner" />
+                                <img src="https://homelengo.vercel.app/images/banner/banner.png" alt="banner" />
                             </div>
                         </div>
                     </div>

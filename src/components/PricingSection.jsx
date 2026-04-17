@@ -194,7 +194,7 @@ const PricingSection = () => (
                 pointerEvents: "none",
             }} />
 
-            <div className="container" style={{ position: "relative", zIndex: 1 }}>
+            <div className="container pt-5 mb-5" style={{ position: "relative", zIndex: 1 }}>
 
                 {/* ── Header ── */}
                 <div data-animate="up" style={{ textAlign: "center", marginBottom: "60px" }}>

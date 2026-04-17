@@ -1,7 +1,12 @@
 import SignInModal from "../components/Modals/SignInModal";
 import SignUpModal from "../components/Modals/SignUpModal";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+    const { pathname } = useLocation();
+    const isActivePath = (path) => (path === "/" ? pathname === "/" : pathname.startsWith(path));
+    const navClass = (baseClass, path) => `${baseClass}${isActivePath(path) ? " current" : ""}`;
+
     return (
         <>
             {/* Main Header */}
@@ -14,9 +19,9 @@ const Header = () => {
                                 <div className="inner-header-left">
                                     <div className="logo-box flex">
                                         <div className="logo">
-                                            <a href="/">
+                                            <Link to="/">
                                                 <img src="images/logo/logo@2x.png" alt="logo" width="166" height="48" />
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="nav-outer flex align-center">
@@ -24,11 +29,14 @@ const Header = () => {
                                         <nav className="main-menu show navbar-expand-md">
                                             <div className="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                                 <ul className="navigation clearfix">
-                                                    <li className="home current">
-                                                        <a href="/">Home</a>
+                                                    <li className={navClass("home", "/")}>
+                                                        <Link to="/">Home</Link>
                                                     </li>
-                                                    <li className="home">
-                                                        <a href="/how-it-works">How It Works</a>
+                                                    <li className={navClass("home", "/how-it-works")}>
+                                                        <Link to="/how-it-works">How It Works</Link>
+                                                    </li>
+                                                    <li className={navClass("pricing", "/pricing")}>
+                                                        <Link to="/pricing">Pricing</Link>
                                                     </li>
                                                     <li className="dropdown2"><a href="#">Features</a>
                                                         <ul>
@@ -38,12 +46,12 @@ const Header = () => {
                                                             <li><a href="#">Dashboard</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li className="dropdown2"><a href="#">Pricing</a>
+                                                    {/* <li className={navClass("dropdown2", "/pricing")}><Link to="/pricing">Pricing</Link>
                                                         <ul>
                                                             <li><a href="#">Reports (buyers)</a></li>
                                                             <li><a href="#">Subscriptions (providers)</a></li>
                                                         </ul>
-                                                    </li>
+                                                    </li> */}
                                                     <li className="dropdown2"><a href="#">For Providers</a>
                                                         <ul>
                                                             <li><a href="#">Service logging</a></li>
@@ -56,8 +64,8 @@ const Header = () => {
                                                             <li><a href="#">Manage records</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li className="home">
-                                                        <a href="/contact-us">Contact Us</a>
+                                                    <li className={navClass("home", "/contact-us")}>
+                                                        <Link to="/contact-us">Contact Us</Link>
                                                     </li>
                                                     {/* <li className="dropdown2"><a href="#">Listing</a>
                                                         <ul>
@@ -147,7 +155,7 @@ const Header = () => {
                 <div className="mobile-menu">
                     <div className="menu-backdrop"></div>
                     <nav className="menu-box">
-                        <div className="nav-logo"><a href="/"><img src="images/logo/logo@2x.png" alt="nav-logo" width="174" height="44" /></a></div>
+                        <div className="nav-logo"><Link to="/"><img src="images/logo/logo@2x.png" alt="nav-logo" width="174" height="44" /></Link></div>
                         <div className="bottom-canvas">
                             <div className="login-box flex align-center">
                                 <a href="#modalLogin" data-bs-toggle="modal">Login</a>
