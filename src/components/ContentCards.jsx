@@ -115,7 +115,7 @@ const ContentCards = () => {
 
             <section className="who-its-for-main">
                 <div className="container">
-                    <div className="row g-4">
+                    <div className="row g-4" data-stagger>
                         {cardData.map((item, index) => (
                             <div className="col-md-4" key={index}>
                                 <div className="custom-card">
