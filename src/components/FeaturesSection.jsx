@@ -12,39 +12,39 @@ const C = {
 };
 
 const stats = [
-    { value: "50K+",   label: "Properties Tracked",   icon: "🏠" },
-    { value: "280K+",  label: "Verified Records",      icon: "✅" },
-    { value: "4,800+", label: "Service Providers",     icon: "🛠️" },
-    { value: "98%",    label: "Verification Accuracy", icon: "🎯" },
+    { value: "50K+", label: "Properties Tracked", icon: "🏠" },
+    { value: "280K+", label: "Verified Records", icon: "✅" },
+    { value: "4,800+", label: "Service Providers", icon: "🛠️" },
+    { value: "98%", label: "Verification Accuracy", icon: "🎯" },
 ];
 
 const features = [
-    { icon: "🔐", tag: "Data Integrity",    title: "Tamper-Proof Verification",  desc: "Every service record is validated by the provider and locked to the property profile — no alterations, no fakes, no ambiguity." },
-    { icon: "📅", tag: "Core Feature",      title: "Full Property Timeline",      desc: "A chronological, structured audit trail of every maintenance event — from day one of ownership to the present day." },
-    { icon: "🔑", tag: "Homeowner",         title: "Owner Access Control",        desc: "Claim your property, decide what gets shared and with whom. You stay in control of your data at every step." },
-    { icon: "📊", tag: "Buyer Intelligence",title: "Property Health Score",       desc: "A single trust score derived from the depth, recency, and quality of verified service records — like a credit score for homes." },
-    { icon: "🛠️", tag: "Service Provider", title: "Provider Dashboard",          desc: "A powerful SaaS toolset for service professionals to upload records, manage properties, and grow their verified reputation." },
-    { icon: "🔓", tag: "Pay Per Report",    title: "On-Demand Report Unlock",     desc: "Buyers and agents pay a one-time fee to unlock the full verified report for any property — complete history, no subscription." },
+    { icon: "🔐", tag: "Data Integrity", title: "Tamper-Proof Verification", desc: "Every service record is validated by the provider and locked to the property profile — no alterations, no fakes, no ambiguity." },
+    { icon: "📅", tag: "Core Feature", title: "Full Property Timeline", desc: "A chronological, structured audit trail of every maintenance event — from day one of ownership to the present day." },
+    { icon: "🔑", tag: "Homeowner", title: "Owner Access Control", desc: "Claim your property, decide what gets shared and with whom. You stay in control of your data at every step." },
+    { icon: "📊", tag: "Buyer Intelligence", title: "Property Health Score", desc: "A single trust score derived from the depth, recency, and quality of verified service records — like a credit score for homes." },
+    { icon: "🛠️", tag: "Service Provider", title: "Provider Dashboard", desc: "A powerful SaaS toolset for service professionals to upload records, manage properties, and grow their verified reputation." },
+    { icon: "🔓", tag: "Pay Per Report", title: "On-Demand Report Unlock", desc: "Buyers and agents pay a one-time fee to unlock the full verified report for any property — complete history, no subscription." },
 ];
 
 // Two rows of listings, scrolling in opposite directions
 const row1 = [
-    { img: "/images/banner/banner-property-1.jpg",  address: "142 Maple Ave, Austin TX",      score: 86, records: 12, price: "$485,000", type: "House",  tag: "HVAC · Roofing · Electrical" },
-    { img: "/images/banner/banner-property-2.jpg",  address: "88 Oak Street, Denver CO",       score: 92, records: 18, price: "$372,000", type: "Villa",  tag: "Plumbing · Foundation" },
-    { img: "/images/banner/banner-property-3.jpg",  address: "221 Pine Rd, Seattle WA",        score: 74, records: 8,  price: "$621,000", type: "Condo",  tag: "HVAC · Pest Control" },
-    { img: "/images/banner/banner-property-4.jpg",  address: "9 Harbor Blvd, Miami FL",        score: 88, records: 15, price: "$890,000", type: "House",  tag: "Roofing · Electrical" },
-    { img: "/images/banner/banner-property-5.jpg",  address: "33 Elm Court, Chicago IL",       score: 79, records: 10, price: "$310,000", type: "Studio", tag: "Plumbing · HVAC" },
-    { img: "/images/banner/banner-property-6.jpg",  address: "500 Lakeview Dr, Portland OR",   score: 95, records: 22, price: "$540,000", type: "House",  tag: "Full History" },
-    { img: "/images/banner/banner-property-7.jpg",  address: "14 Birch Lane, Nashville TN",    score: 83, records: 14, price: "$425,000", type: "House",  tag: "HVAC · Roofing" },
+    { img: "/images/features/142-Maple-Ave,-Austin-TX.jpg", address: "142 Maple Ave, Austin TX", score: 86, records: 12, price: "$485,000", type: "House", tag: "HVAC · Roofing · Electrical" },
+    { img: "/images/features/88-Oak-Street,-Denver-CO.jfif", address: "88 Oak Street, Denver CO", score: 92, records: 18, price: "$372,000", type: "Villa", tag: "Plumbing · Foundation" },
+    { img: "/images/features/221-Pine-Rd,-Seattle-WA.webp", address: "221 Pine Rd, Seattle WA", score: 74, records: 8, price: "$621,000", type: "Condo", tag: "HVAC · Pest Control" },
+    { img: "/images/features/9-Harbor-Blvd,-Miami-F.webp", address: "9 Harbor Blvd, Miami FL", score: 88, records: 15, price: "$890,000", type: "House", tag: "Roofing · Electrical" },
+    { img: "/images/features/33-Elm-Court,-Chicago-IL.jpg", address: "33 Elm Court, Chicago IL", score: 79, records: 10, price: "$310,000", type: "Studio", tag: "Plumbing · HVAC" },
+    { img: "/images/features/500-Lakeview-Dr,-Portland-OR.png", address: "500 Lakeview Dr, Portland OR", score: 95, records: 22, price: "$540,000", type: "House", tag: "Full History" },
+    { img: "/images/features/14-Birch-Lane,-Nashville-TN.jpeg", address: "14 Birch Lane, Nashville TN", score: 83, records: 14, price: "$425,000", type: "House", tag: "HVAC · Roofing" },
 ];
 const row2 = [
-    { img: "/images/banner/banner-property-8.jpg",  address: "77 Sunset Blvd, Phoenix AZ",    score: 90, records: 17, price: "$398,000", type: "Villa",  tag: "Electrical · Foundation" },
-    { img: "/images/banner/banner-property-9.jpg",  address: "3 Willow Way, Boston MA",        score: 68, records: 6,  price: "$710,000", type: "Condo",  tag: "Pest Control · HVAC" },
-    { img: "/images/banner/banner-property-10.jpg", address: "19 Cedar Ave, San Diego CA",     score: 94, records: 20, price: "$950,000", type: "House",  tag: "Full History" },
-    { img: "/images/banner/banner-property-11.jpg", address: "60 Redwood St, Las Vegas NV",    score: 77, records: 9,  price: "$285,000", type: "Studio", tag: "HVAC · Plumbing" },
-    { img: "/images/banner/banner-property-12.jpg", address: "28 Magnolia Dr, Atlanta GA",     score: 85, records: 13, price: "$460,000", type: "House",  tag: "Roofing · Electrical" },
-    { img: "/images/banner/banner-property-13.jpg", address: "101 Spruce Ln, Minneapolis MN",  score: 81, records: 11, price: "$335,000", type: "House",  tag: "Foundation · HVAC" },
-    { img: "/images/banner/banner-property-1.jpg",  address: "57 Aspen Ct, Salt Lake City UT", score: 89, records: 16, price: "$512,000", type: "Villa",  tag: "Plumbing · Roofing" },
+    { img: "/images/features/77-Sunset-Blvd,-Phoenix-AZ.webp", address: "77 Sunset Blvd, Phoenix AZ", score: 90, records: 17, price: "$398,000", type: "Villa", tag: "Electrical · Foundation" },
+    { img: "/images/features/3-Willow-Way,-Boston-MA.jpg", address: "3 Willow Way, Boston MA", score: 68, records: 6, price: "$710,000", type: "Condo", tag: "Pest Control · HVAC" },
+    { img: "/images/features/19-Cedar-Ave,-San-Diego-CA.jpg", address: "19 Cedar Ave, San Diego CA", score: 94, records: 20, price: "$950,000", type: "House", tag: "Full History" },
+    { img: "/images/features/60-Redwood-St,-Las-Vegas-NV.jpeg", address: "60 Redwood St, Las Vegas NV", score: 77, records: 9, price: "$285,000", type: "Studio", tag: "HVAC · Plumbing" },
+    { img: "/images/features/28-Magnolia-Dr,-Atlanta-G.jpg", address: "28 Magnolia Dr, Atlanta GA", score: 85, records: 13, price: "$460,000", type: "House", tag: "Roofing · Electrical" },
+    { img: "/images/features/101-Spruce-Ln,-Minneapolis-MN.jpg", address: "101 Spruce Ln, Minneapolis MN", score: 81, records: 11, price: "$335,000", type: "House", tag: "Foundation · HVAC" },
+    { img: "/images/features/57-Aspen-Ct,-Salt-Lake-City-UT.png", address: "57 Aspen Ct, Salt Lake City UT", score: 89, records: 16, price: "$512,000", type: "Villa", tag: "Plumbing · Roofing" },
 ];
 
 const scoreColor = (s) => s >= 90 ? "#16A34A" : s >= 75 ? "#1563df" : "#D97706";
@@ -141,12 +141,12 @@ const ListingCard = ({ p }) => (
 );
 
 const reportItems = [
-    { label: "Service Records",       value: "12 verified" },
-    { label: "Last Inspection",       value: "Mar 2024" },
+    { label: "Service Records", value: "12 verified" },
+    { label: "Last Inspection", value: "Mar 2024" },
     { label: "Property Health Score", value: "86 / 100" },
-    { label: "Years of Data",         value: "7 years" },
-    { label: "Active Providers",      value: "4 companies" },
-    { label: "Report Access",         value: "$30 one-time" },
+    { label: "Years of Data", value: "7 years" },
+    { label: "Active Providers", value: "4 companies" },
+    { label: "Report Access", value: "$30 one-time" },
 ];
 
 const FeaturesSection = () => {
