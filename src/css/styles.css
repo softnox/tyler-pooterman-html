@@ -2586,7 +2586,7 @@ label {
 
 .nav-tab-recommended .nav-link-item.active,
 .nav-tab-recommended .nav-link-item:hover {
-  background-color: #1563df;
+  background-color: #1563df !important;
   color: #ffffff;
 }
 

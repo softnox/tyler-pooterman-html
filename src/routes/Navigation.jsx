@@ -4,6 +4,8 @@ import Contactus from "../pages/Contactus";
 import HowItWorks from "../pages/HowItWorks";
 import Pricing from "../pages/pricing";
 import Features from "../pages/Features";
+import TermsConditions from "../pages/TermsConditions";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 const Navigation = () => {
     return (
@@ -14,6 +16,8 @@ const Navigation = () => {
                 <Route path="/features" element={<Features />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contact-us" element={<Contactus />} />
+                <Route path="/terms-conditions" element={<TermsConditions />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
         </BrowserRouter>
     );
