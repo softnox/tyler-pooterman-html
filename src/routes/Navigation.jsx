@@ -6,6 +6,7 @@ import Pricing from "../pages/pricing";
 import Features from "../pages/Features";
 import TermsConditions from "../pages/TermsConditions";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 const Navigation = () => {
     return (
@@ -18,6 +19,8 @@ const Navigation = () => {
                 <Route path="/contact-us" element={<Contactus />} />
                 <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+                <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
         </BrowserRouter>
     );

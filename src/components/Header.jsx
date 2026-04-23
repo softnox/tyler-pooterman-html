@@ -1,13 +1,11 @@
 import SignInModal from "../components/Modals/SignInModal";
 import SignUpModal from "../components/Modals/SignUpModal";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ForgetModal from "./Modals/ForgetModal";
 import OtpModal from "./Modals/OtpModal";
+import NavMenu from "./NavMenu";
 
 const Header = () => {
-    const { pathname } = useLocation();
-    const isActivePath = (path) => (path === "/" ? pathname === "/" : pathname.startsWith(path));
-    const navClass = (baseClass, path) => `${baseClass}${isActivePath(path) ? " current" : ""}`;
 
     return (
         <>
@@ -30,90 +28,7 @@ const Header = () => {
                                         {/* Main Menu */}
                                         <nav className="main-menu show navbar-expand-md">
                                             <div className="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-                                                <ul className="navigation clearfix">
-                                                    <li className={navClass("home", "/")}>
-                                                        <Link to="/">Home</Link>
-                                                    </li>
-                                                    <li className={navClass("home", "/how-it-works")}>
-                                                        <Link to="/how-it-works">How It Works</Link>
-                                                    </li>
-                                                    <li className={navClass("home", "/pricing")}>
-                                                        <Link to="/pricing">Pricing</Link>
-                                                    </li>
-                                                    <li className={navClass("home", "/features")}>
-                                                        <Link to="/features">Features</Link>
-                                                    </li>
-                                                    {/* <li className={navClass("dropdown2", "/pricing")}><Link to="/pricing">Pricing</Link>
-                                                        <ul>
-                                                            <li><a href="#">Reports (buyers)</a></li>
-                                                            <li><a href="#">Subscriptions (providers)</a></li>
-                                                        </ul>
-                                                    </li> */}
-                                                    <li className="dropdown2"><a href="#">For Providers</a>
-                                                        <ul>
-                                                            <li><a href="#">Service logging</a></li>
-                                                            <li><a href="#">Tools overview</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className="dropdown2"><a href="#">For Homeowners</a>
-                                                        <ul>
-                                                            <li><a href="#">Claim property</a></li>
-                                                            <li><a href="#">Manage records</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className={navClass("home", "/contact-us")}>
-                                                        <Link to="/contact-us">Contact Us</Link>
-                                                    </li>
-                                                    {/* <li className="dropdown2"><a href="#">Listing</a>
-                                                        <ul>
-                                                            <li><a href="property-halfmap-grid.html">Property Half Map Grid</a></li>
-                                                            <li><a href="property-halfmap-list.html">Property Half Map List</a></li>
-                                                            <li><a href="topmap-grid.html">Find Topmap Grid</a></li>
-                                                            <li><a href="topmap-list.html">Find Topmap List</a></li>
-                                                            <li><a href="sidebar-grid.html">Find Sidebar Grid</a></li>
-                                                            <li><a href="sidebar-list.html">Find Sidebar List</a></li>
-
-                                                        </ul>
-                                                    </li>
-                                                    <li className="dropdown2"><a href="#">Properties</a>
-                                                        <ul>
-                                                            <li><a href="property-details-v1.html">Property Details 1</a></li>
-                                                            <li><a href="property-details-v2.html">Property Details 2</a></li>
-                                                            <li><a href="property-details-v3.html">Property Details 3</a></li>
-                                                            <li><a href="property-details-v4.html">Property Details 4</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className="dropdown2"><a href="#">Pages</a>
-                                                        <ul>
-                                                            <li><a href="about-us.html">About Us</a></li>
-                                                            <li><a href="our-service.html">Our Services</a></li>
-                                                            <li><a href="pricing.html">Pricing</a></li>
-                                                            <li><a href="contact.html">Contact Us</a></li>
-                                                            <li><a href="faq.html">FAQs</a></li>
-                                                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-
-                                                        </ul>
-                                                    </li>
-                                                    <li className="dropdown2"><a href="#">Blog</a>
-                                                        <ul>
-                                                            <li><a href="blog.html">Blog Default</a></li>
-                                                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                            <li><a href="blog-detail.html">Blog Post Details</a></li>
-                                                        </ul>
-                                                    </li>
-
-                                                    <li className="dropdown2"><a href="#">Dashboard</a>
-                                                        <ul>
-                                                            <li><a href="dashboard.html">Dashboard</a></li>
-                                                            <li><a href="my-property.html">My Properties</a></li>
-                                                            <li><a href="message.html">Message</a></li>
-                                                            <li><a href="my-favorites.html">My Favorites</a></li>
-                                                            <li><a href="reviews.html">Reviews</a></li>
-                                                            <li><a href="my-profile.html">My Profile</a></li>
-                                                            <li><a href="add-property.html">Add Property</a></li>
-                                                        </ul>
-                                                    </li> */}
-                                                </ul>
+                                                <NavMenu />
                                             </div>
                                         </nav>
                                         {/* Main Menu End--> */}

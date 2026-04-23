@@ -75,8 +75,8 @@ const HeroSection = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            paddingTop: "100px",
-            paddingBottom: "0",
+            paddingTop: "50px",
+            paddingBottom: "0px",
         }}>
             <style>{`
                 @keyframes heroPulse {
@@ -175,7 +175,7 @@ const HeroSection = () => {
 
                         {/* Headline */}
                         <h1 data-hero-seq style={{
-                            fontSize: "clamp(36px, 4.5vw, 62px)", fontWeight: "900", opacity: 0,
+                            fontSize: "clamp(36px, 4.5vw, 51px)", fontWeight: "900", opacity: 0,
                             lineHeight: "1.08", color: C.textHigh, marginBottom: "24px",
                             letterSpacing: "-0.03em",
                         }}>
