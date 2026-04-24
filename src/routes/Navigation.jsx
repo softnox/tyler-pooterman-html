@@ -10,6 +10,9 @@ import Realtors from "../pages/Realtors";
 import HomeOwners from "../pages/HomeOwners";
 import ServiceProfessionals from "../pages/ServiceProfessionals";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import AllServices from "../pages/AllServices";
+import AllProperties from "../pages/AllProperties";
+import PropertyDetails from "../pages/PropertyDetails";
 
 const Navigation = () => {
     return (
@@ -25,6 +28,9 @@ const Navigation = () => {
                 <Route path="/realtors" element={<Realtors />} />
                 <Route path="/home-owners" element={<HomeOwners />} />
                 <Route path="/service-professionals" element={<ServiceProfessionals />} />
+                <Route path="/all-services" element={<AllServices />} />
+                <Route path="/all-properties" element={<AllProperties />} />
+                <Route path="/property-deatils/:id" element={<PropertyDetails />} />
 
                 <Route path="/dashboard" element={<Dashboard />} />
             </Routes>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const C = {
     bg: "#f3f7fd",
     white: "#ffffff",
@@ -266,6 +268,30 @@ const FeaturesSection = () => {
                         </div>
                     ))}
                 </div>
+
+                <div style={{ textAlign: "center", marginBottom: "72px" }}>
+                    <Link
+                        to="/all-services"
+                        style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "8px",
+                            padding: "12px 28px",
+                            borderRadius: "10px",
+                            border: `1px solid ${C.primaryBorder}`,
+                            background: C.primary,
+                            color: "#fff",
+                            fontSize: "14px",
+                            fontWeight: "700",
+                            textDecoration: "none",
+                            boxShadow: "0 8px 20px rgba(21,99,223,0.25)",
+                            transition: "all 0.2s",
+                        }}
+                    >
+                        View All Services
+                    </Link>
+                </div>
             </div>
 
             {/* ── Listings Carousel (full bleed) ── */}
@@ -323,6 +349,30 @@ const FeaturesSection = () => {
                     }}>
                         {[...row2, ...row2].map((p, i) => <ListingCard key={i} p={p} />)}
                     </div>
+                </div>
+
+                <div style={{ textAlign: "center", marginTop: "34px" }}>
+                    <Link
+                        to="/all-properties"
+                        style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "8px",
+                            padding: "12px 28px",
+                            borderRadius: "10px",
+                            border: `1px solid ${C.primaryBorder}`,
+                            background: C.primary,
+                            color: "#fff",
+                            fontSize: "14px",
+                            fontWeight: "700",
+                            textDecoration: "none",
+                            boxShadow: "0 8px 20px rgba(21,99,223,0.25)",
+                            transition: "all 0.2s",
+                        }}
+                    >
+                        View All Properties
+                    </Link>
                 </div>
             </div>
 
