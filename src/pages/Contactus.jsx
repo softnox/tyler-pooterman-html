@@ -19,7 +19,7 @@ const Contactus = () => {
                     <div className="container">
                         <div className="breadcrumb-content">
                             <ul className="breadcrumb">
-                                <li><a href="index.html" className="text-white">Home</a></li>
+                                <li><a href="/" className="text-white">Home</a></li>
                                 <li className="text-white">/ Pages</li>
                                 <li className="text-white">/ Contact Us</li>
                             </ul>

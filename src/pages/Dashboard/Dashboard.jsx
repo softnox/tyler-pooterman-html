@@ -1,13 +1,37 @@
 import { useState, useEffect } from 'react';
 import NavMenu from '../../components/NavMenu';
 import { Link } from 'react-router-dom';
-
+import { Modal, message } from 'antd';
+import { IoLogOutOutline } from "react-icons/io5";
+import { ExclamationCircleOutlined } from '@ant-design/icons';
 // ============================================
 // HEADER COMPONENT
 // ============================================
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+    const showLogoutConfirm = () => {
+        Modal.confirm({
+            title: 'Are you sure you want to logout?',
+            icon: <ExclamationCircleOutlined />,
+            content: 'This will clear all your local data (localStorage). This action cannot be undone!',
+            okText: 'Yes, Logout',
+            okType: 'danger',
+            cancelText: 'Cancel',
+            onOk: handleLogout,
+            onCancel: () => {
+                console.log('Logout cancelled');
+            },
+        });
+    };
+
+    const handleLogout = () => {
+        localStorage.clear();
+
+        message.success('Logged out successfully!');
+
+        window.location.href = '/';
+    };
     return (
         <header className="main-header fixed-header header-dashboard">
             <div className="header-lower">
@@ -35,11 +59,13 @@ const Header = () => {
                             </div>
 
                             <div className="flat-bt-top">
-                                <a className="tf-btn primary" href="add-property.html">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.625 14.375V17.1875C13.625 17.705 13.205 18.125 12.6875 18.125H4.5625C4.31386 18.125 4.0754 18.0262 3.89959 17.8504C3.72377 17.6746 3.625 17.4361 3.625 17.1875V6.5625C3.625 6.045 4.045 5.625 4.5625 5.625H6.125C6.54381 5.62472 6.96192 5.65928 7.375 5.72834M13.625 14.375H16.4375C16.955 14.375 17.375 13.955 17.375 13.4375V9.375C17.375 5.65834 14.6725 2.57417 11.125 1.97834C10.7119 1.90928 10.2938 1.87472 9.875 1.875H8.3125C7.795 1.875 7.375 2.295 7.375 2.8125V5.72834M13.625 14.375H8.3125C8.06386 14.375 7.8254 14.2762 7.64959 14.1004C7.47377 13.9246 7.375 13.6861 7.375 13.4375V5.72834M17.375 11.25V9.6875C17.375 8.94158 17.0787 8.22621 16.5512 7.69876C16.0238 7.17132 15.3084 6.875 14.5625 6.875H13.3125C13.0639 6.875 12.8254 6.77623 12.6496 6.60041C12.4738 6.4246 12.375 6.18614 12.375 5.9375V4.6875C12.375 4.31816 12.3023 3.95243 12.1609 3.6112C12.0196 3.26998 11.8124 2.95993 11.5512 2.69876C11.2901 2.4376 10.98 2.23043 10.6388 2.08909C10.2976 1.94775 9.93184 1.875 9.5625 1.875H8.625" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                    Submit Property
+                                <a
+                                    className="tf-btn primary"
+                                    onClick={showLogoutConfirm}
+                                    style={{ cursor: 'pointer' }}
+                                >
+                                    <IoLogOutOutline size={20} />
+                                    Logout
                                 </a>
                             </div>
 
@@ -55,7 +81,7 @@ const Header = () => {
                     <div className="close-btn" onClick={() => setMobileMenuOpen(false)}><span className="icon flaticon-cancel-1"></span></div>
                     <div className="menu-backdrop"></div>
                     <nav className="menu-box">
-                        <div className="nav-logo"><a href="index.html"><img src="images/logo/logo@2x.png" alt="nav-logo" width="174" height="44" /></a></div>
+                        <div className="nav-logo"><a href="/"><img src="images/logo/logo@2x.png" alt="nav-logo" width="174" height="44" /></a></div>
                         <div className="bottom-canvas">
                             <div className="menu-outer"></div>
                             <div className="button-mobi-sell">
@@ -85,7 +111,7 @@ const Header = () => {
 const Sidebar = () => {
     return (
         <div className="sidebar-menu-dashboard">
-            <a href="index.html" className="logo-box">
+            <a href="/" className="logo-box">
                 <img src="images/logo/logo-footer@2x.png" alt="" />
             </a>
             <div className="user-box">
@@ -195,7 +221,7 @@ const Sidebar = () => {
                         </a>
                     </li>
                     <li className="nav-menu-item">
-                        <a className="nav-menu-link" href="index.html">
+                        <a className="nav-menu-link" href="/">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.2">
                                     <path d="M13.7627 6.77418V5.91893C13.7627 4.05352 12.2502 2.54102 10.3848 2.54102H5.91606C4.05156 2.54102 2.53906 4.05352 2.53906 5.91893V16.1214C2.53906 17.9868 4.05156 19.4993 5.91606 19.4993H10.394C12.2539 19.4993 13.7627 17.9914 13.7627 16.1315V15.2671" stroke="#F1FAEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -467,7 +493,9 @@ const MainDashboard = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer-dashboard"><p>Copyright © 2024 Home Lengo</p></div>
+            <div className="footer-dashboard">
+                <p>Copyright © 2026 Site Scouter</p>
+            </div>
         </div>
     );
 };
