@@ -2586,7 +2586,7 @@ label {
 
 .nav-tab-recommended .nav-link-item.active,
 .nav-tab-recommended .nav-link-item:hover {
-  background-color: #1563df;
+  background-color: #1563df !important;
   color: #ffffff;
 }
 
@@ -9700,8 +9700,8 @@ label {
 
 .sidebar-menu-dashboard {
   position: fixed;
-  width: 280px;
-  min-width: 280px;
+  width: 260px;
+  min-width: 260px;
   background: #161e2d;
   height: 100%;
   top: 0;
@@ -9777,7 +9777,7 @@ label {
 }
 
 .sidebar-menu-dashboard .logo-box img {
-  width: 166px;
+  width: 130px;
 }
 
 .sidebar-menu-dashboard .user-box {
@@ -9798,8 +9798,8 @@ label {
 
 .sidebar-menu-dashboard .user-box .user .icon-box {
   background-color: rgba(255, 255, 255, 0.4);
-  width: 52px;
-  height: 52px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -9822,7 +9822,7 @@ label {
 }
 
 .layout-wrap .main-content {
-  padding-left: 280px;
+  padding-left: 260px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
@@ -9858,6 +9858,7 @@ label {
 
 .layout-wrap .main-content-inner {
   padding: 47px 50px 30px;
+  background-color: #f7f7f7;
 }
 
 .layout-wrap .main-content-inner .wrapper-content .content-left {
