@@ -13,12 +13,12 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import AllServices from "../pages/AllServices";
 import AllProperties from "../pages/AllProperties";
 import PropertyDetails from "../pages/PropertyDetails";
-import Profile from "../pages/Dashboard/pages/Profile";
-import Reviews from "../pages/Dashboard/pages/Reviews";
-import MyProperties from "../pages/Dashboard/pages/MyProperties";
-import MyFavorite from "../pages/Dashboard/pages/MyFavorite";
+import ProfileManagement from "../pages/Dashboard/pages/ProfileManagement";
+import ReportManagement from "../pages/Dashboard/pages/ReportManagement";
+import Subscription from "../pages/Dashboard/pages/Subscription";
 import Message from "../pages/Dashboard/pages/Message";
 import AddProperty from "../pages/Dashboard/pages/AddProperty";
+import PropertyManagement from "../pages/Dashboard/pages/PropertyManagement";
 
 const Navigation = () => {
     return (
@@ -39,10 +39,10 @@ const Navigation = () => {
                 <Route path="/property-deatils/:id" element={<PropertyDetails />} />
 
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/dashboard/profile" element={<Profile />} />
-                <Route path="/dashboard/reviews" element={<Reviews />} />
-                <Route path="/dashboard/my-properties" element={<MyProperties />} />
-                <Route path="/dashboard/my-favorite" element={<MyFavorite />} />
+                <Route path="/dashboard/profile-management" element={<ProfileManagement />} />
+                <Route path="/dashboard/report-management" element={<ReportManagement />} />
+                <Route path="/dashboard/property-management" element={<PropertyManagement />} />
+                <Route path="/dashboard/subscription" element={<Subscription />} />
                 <Route path="/dashboard/message" element={<Message />} />
                 <Route path="/dashboard/add-property" element={<AddProperty />} />
             </Routes>

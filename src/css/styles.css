@@ -377,7 +377,8 @@ h1 {
 }
 
 h2 {
-  font-size: 44px;
+  font-size: 30px;
+  font-weight: 700 !important;
   line-height: 62px;
 }
 
@@ -961,7 +962,7 @@ label {
 .main-header {
   z-index: 999;
   width: 100%;
-  height: 90px;
+  /* height: 90px; */
   position: relative;
   background-color: #ffffff;
   padding-left: 15px;
@@ -1139,7 +1140,7 @@ label {
   width: 150px;
   height: 75px;
   object-fit: contain;
-  margin-top: 4px;
+  margin: 8px 0px !important;
   object-fit: contain;
   -webkit-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
@@ -9857,7 +9858,7 @@ label {
 }
 
 .layout-wrap .main-content-inner {
-  padding: 47px 50px 30px;
+  padding: 25px 25px 25px;
   background-color: #f7f7f7;
 }
 
@@ -9867,6 +9868,10 @@ label {
 
 .layout-wrap .main-content-inner .wrapper-content .content-right {
   flex-grow: 1;
+}
+
+.ip-group {
+  margin-bottom: 21px;
 }
 
 .layout-wrap .wd-listing {
