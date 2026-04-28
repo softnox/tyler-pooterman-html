@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 const DashboardSidebar = () => {
     return (
         <div className="sidebar-menu-dashboard">
-            <a href="index.html" className="logo-box">
-                <img src="images/logo/logo-footer@2x.png" alt="" />
+            <a href="/" className="logo-box">
+                <img src="/images/logo/logo-footer@2x.png" alt="" />
             </a>
             <div className="user-box">
                 <p className="fw-6">Profile</p>
@@ -45,29 +45,18 @@ const DashboardSidebar = () => {
                         </Link>
                     </li>
                     <li className="nav-menu-item">
-                        <Link className="nav-menu-link" to="/dashboard/profile">
+                        <Link className="nav-menu-link" to="/dashboard/profile-management">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.2">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M10.987 14.0684C7.44168 14.0684 4.41406 14.6044 4.41406 16.7511C4.41406 18.8979 7.42247 19.4531 10.987 19.4531C14.5323 19.4531 17.5591 18.9162 17.5591 16.7703C17.5591 14.6245 14.5515 14.0684 10.987 14.0684Z" stroke="#F1FAEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                     <path fillRule="evenodd" clipRule="evenodd" d="M10.9866 11.0056C13.3132 11.0056 15.1989 9.11897 15.1989 6.79238C15.1989 4.46579 13.3132 2.58008 10.9866 2.58008C8.66005 2.58008 6.77346 4.46579 6.77346 6.79238C6.7656 9.11111 8.6391 10.9977 10.957 11.0056H10.9866Z" stroke="#F1FAEE" strokeWidth="1.42857" strokeLinecap="round" strokeLinejoin="round" />
                                 </g>
                             </svg>
-                            Profile
+                            Profile Management
                         </Link>
                     </li>
                     <li className="nav-menu-item">
-                        <Link className="nav-menu-link" to="/dashboard/reviews">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g opacity="0.2">
-                                    <path d="M16.4076 8.11328L12.3346 11.4252C11.5651 12.0357 10.4824 12.0357 9.71285 11.4252L5.60547 8.11328" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M15.4985 19.25C18.2864 19.2577 20.1654 16.9671 20.1654 14.1518V7.85584C20.1654 5.04059 18.2864 2.75 15.4985 2.75H6.49891C3.711 2.75 1.83203 5.04059 1.83203 7.85584V14.1518C1.83203 16.9671 3.711 19.2577 6.49891 19.25H15.4985Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </g>
-                            </svg>
-                            Reviews
-                        </Link>
-                    </li>
-                    <li className="nav-menu-item">
-                        <Link className="nav-menu-link" to="/dashboard/my-properties">
+                        <Link className="nav-menu-link" to="/dashboard/property-management">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.2">
                                     <path d="M10.533 2.55664H7.10561C4.28686 2.55664 2.51953 4.55222 2.51953 7.37739V14.9986C2.51953 17.8237 4.27861 19.8193 7.10561 19.8193H15.1943C18.0222 19.8193 19.7813 17.8237 19.7813 14.9986V11.3062" stroke="#F1FAEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -75,9 +64,21 @@ const DashboardSidebar = () => {
                                     <path d="M13.8984 4.21875L18.0839 8.40425" stroke="#F1FAEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </g>
                             </svg>
-                            My properties
+                            Property Management
                         </Link>
                     </li>
+                    <li className="nav-menu-item">
+                        <Link className="nav-menu-link" to="/dashboard/report-management">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.2">
+                                    <path d="M16.4076 8.11328L12.3346 11.4252C11.5651 12.0357 10.4824 12.0357 9.71285 11.4252L5.60547 8.11328" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M15.4985 19.25C18.2864 19.2577 20.1654 16.9671 20.1654 14.1518V7.85584C20.1654 5.04059 18.2864 2.75 15.4985 2.75H6.49891C3.711 2.75 1.83203 5.04059 1.83203 7.85584V14.1518C1.83203 16.9671 3.711 19.2577 6.49891 19.25H15.4985Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </g>
+                            </svg>
+                            Report Management
+                        </Link>
+                    </li>
+                  
                     <li className="nav-menu-item">
                         <Link className="nav-menu-link" to="/dashboard/my-favorite">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,18 +113,7 @@ const DashboardSidebar = () => {
                             Add Property
                         </Link>
                     </li>
-                    <li className="nav-menu-item">
-                        <Link className="nav-menu-link" to="/">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g opacity="0.2">
-                                    <path d="M13.7627 6.77418V5.91893C13.7627 4.05352 12.2502 2.54102 10.3848 2.54102H5.91606C4.05156 2.54102 2.53906 4.05352 2.53906 5.91893V16.1214C2.53906 17.9868 4.05156 19.4993 5.91606 19.4993H10.394C12.2539 19.4993 13.7627 17.9914 13.7627 16.1315V15.2671" stroke="#F1FAEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M19.9907 11.0208H8.95312" stroke="#F1FAEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M17.3047 8.34766L19.9887 11.0197L17.3047 13.6927" stroke="#F1FAEE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </g>
-                            </svg>
-                            Logout
-                        </Link>
-                    </li>
+
                 </ul>
             </div>
         </div>

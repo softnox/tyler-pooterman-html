@@ -52,9 +52,9 @@ const Header = () => {
                                 </div>
                                 <div className="nav-outer flex align-center">
                                     <nav className="main-menu show navbar-expand-md">
-                                        <div className="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                        {/* <div className="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                             <NavMenu />
-                                        </div>
+                                        </div> */}
                                     </nav>
                                 </div>
                             </div>
@@ -499,12 +499,13 @@ const MainDashboard = () => {
     );
 };
 
-const DashboardTitleContent = ({ title }) => {
+const DashboardTitleContent = ({ title, children }) => {
     return (
         <div className="main-content">
             <div className="main-content-inner">
                 <div className="button-show-hide show-mb"><span className="body-1">Show Dashboard</span></div>
                 <h2>{title}</h2>
+                {children}
             </div>
             <div className="footer-dashboard"><p>Copyright © 2024 Home Lengo</p></div>
         </div>
@@ -514,7 +515,7 @@ const DashboardTitleContent = ({ title }) => {
 // ============================================
 // APP COMPONENT (combining all)
 // ============================================
-const Dashboard = ({ pageTitle }) => {
+const Dashboard = ({ pageTitle, children }) => {
     // Preload effect simulation (optional)
     useEffect(() => {
         const preload = document.querySelector('.preload');
@@ -531,7 +532,7 @@ const Dashboard = ({ pageTitle }) => {
                 <div className="layout-wrap">
                     <Header />
                     <DashboardSidebar />
-                    {pageTitle ? <DashboardTitleContent title={pageTitle} /> : <MainDashboard />}
+                    {pageTitle ? <DashboardTitleContent title={pageTitle}>{children}</DashboardTitleContent> : <MainDashboard />}
                     <div className="overlay-dashboard"></div>
                 </div>
             </div>
